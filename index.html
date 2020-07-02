@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alô Sorvetes Delivery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/9998logoAloSorvetes.ico">
+</head>
+
+<body>
+    <div>
+        <img class="banner" src="./images/bannerprincipal.png" alt="Imagem não encontrada">
+    </div>
+    <nav class="menu" id="menu">
+        <a href menu="./sobrenos">Home</a>
+        <a href menu="./contato">Contato</a>
+        <a class="cardapio" href="https://drive.google.com/file/d/1DP-faMqdyrBJLiD5N3R4DR4K7ck36uIY/view" target="_blank">Cardápio</a>
+        <a href menu="./localizacao">Localização</a>
+        <!--<a href menu="">Calculadora de pedidos</a>-->
+    </nav>
+    <section id="conteudo"></section>
+    <script>
+        document.querySelectorAll('[menu]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+            link.onclick = function(e) {
+                e.preventDefault()
+                fetch(link.getAttribute('menu'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+    <div class="logo">
+        <img id="logo_imagem" src="./images/logoAloSorvetes.png" alt="Imagem não encontrada"></label>
+    </div>
+    <script>
+        /* Ao clicar no imagem logo o menu vai aparecer ou desaparecer */
+        let logo_imagem = document.getElementById("logo_imagem")
+        document.getElementById("menu").style.display = "none" // mockar para dar certo
+        logo_imagem.addEventListener("click", function() {
+            if (document.getElementById("menu").style.display == "none") {
+                document.getElementById("menu").style.display = "inline-block"
+                console.log("Apareceu!")
+            } else {
+                document.getElementById("menu").style.display = "none"
+                console.log("Sumiu!")
+            }
+        })
+    </script>
+</body>
+<link rel="stylesheet" type="text/css" href="./estilo.css" media="screen" />
+
+</html>

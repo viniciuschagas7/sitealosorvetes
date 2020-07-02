@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+/* RESET FORMATAÇÃO PADRÃO CSS */
+
+.banner {
+    width: 100%;
+    padding-bottom: 10px;
+    height: 200px;
+}
+
+nav {
+    padding: 5px;
+    border: 5px;
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+[menu],
+.cardapio {
+    background-color: #ffe271;
+    font-size: 18px;
+    color: black;
+    border: solid black 1px;
+    padding: 5px;
+    margin: 1px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+[menu]:hover,
+.cardapio:hover {
+    background-color: skyblue;
+}
+
+#conteudo {
+    display: block;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+}
